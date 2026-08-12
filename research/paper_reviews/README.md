@@ -4,10 +4,10 @@ This folder contains the research paper reviews contributed by the Inspectra tea
 
 ## Team Members
 
-- Vikas
-- Chiranth
-- Numan Pasha
-- Manish
+- Vikas G J
+- Chiranth N
+- N Numan Pasha
+- Manish D
 
 ## Purpose
 
