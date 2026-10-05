@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML model artifacts
+*.pth
+*.pt
+*.pkl
+*.npy
+
+# Datasets
+*.xz
+*.zip
+data/
+datasets/
+
+# Local model directories
+models/
+inspectra_models/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
