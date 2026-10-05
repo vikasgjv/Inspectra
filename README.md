@@ -36,6 +36,7 @@ Anomaly Score
 Normal / Defective
     ↓
 Anomaly Localization
+```
 
 ## Dataset
 
