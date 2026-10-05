@@ -14,26 +14,27 @@ Inspectra aims to provide automated visual inspection by analyzing product image
 
 ## ML Pipeline
 
+```text
 MVTec AD
-↓
+    ↓
 Image Preprocessing
-↓
+    ↓
 WideResNet50-2
-↓
+    ↓
 Layer 2 + Layer 3 Features
-↓
+    ↓
 Patch Feature Extraction
-↓
+    ↓
 PCA Dimensionality Reduction
-↓
+    ↓
 Memory Bank
-↓
+    ↓
 Nearest Neighbor Search
-↓
+    ↓
 Anomaly Score
-↓
+    ↓
 Normal / Defective
-↓
+    ↓
 Anomaly Localization
 
 ## Dataset
