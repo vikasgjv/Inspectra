@@ -1,11 +1,11 @@
+
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
 # Virtual environments
 .venv/
+.venv-clean/
 venv/
 env/
 
@@ -18,18 +18,24 @@ env/
 *.pkl
 *.npy
 
+# Model directories
+backend/models/
+
 # Datasets
 *.xz
 *.zip
 data/
 datasets/
 
-# Local model directories
-models/
-inspectra_models/
+# Uploaded images and generated outputs
+backend/uploads/
+backend/results/
+backend/backend/results/
+*.log
 
 # Environment variables
 .env
+.env.*
 
 # IDE
 .vscode/

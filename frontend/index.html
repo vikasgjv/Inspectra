@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inspectra - AI Visual Inspection</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>INSPECTRA</h1>
+            <p>AI-Powered Industrial Visual Inspection</p>
+        </header>
+
+        <section class="upload-section">
+
+            <div class="input-group">
+                <label for="imageInput">Upload Image</label>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="category">Select Category</label>
+
+                <select id="category">
+                    <option value="bottle">Bottle</option>
+                    <option value="cable">Cable</option>
+                    <option value="capsule">Capsule</option>
+                    <option value="carpet">Carpet</option>
+                    <option value="grid">Grid</option>
+                    <option value="hazelnut">Hazelnut</option>
+                    <option value="leather">Leather</option>
+                    <option value="metal_nut">Metal Nut</option>
+                    <option value="pill">Pill</option>
+                    <option value="screw">Screw</option>
+                    <option value="tile">Tile</option>
+                    <option value="toothbrush">Toothbrush</option>
+                    <option value="transistor">Transistor</option>
+                    <option value="wood">Wood</option>
+                    <option value="zipper">Zipper</option>
+                </select>
+            </div>
+
+            <button type="button" id="inspectButton">
+    Inspect Image
+</button>
+
+        </section>
+
+        <div id="loading" class="loading hidden">
+            Analyzing image...
+        </div>
+
+        <section id="results" class="results hidden">
+
+            <div class="result-summary">
+
+                <h2>Inspection Result</h2>
+
+                <p>
+                    <strong>Category:</strong>
+                    <span id="resultCategory"></span>
+                </p>
+
+                <p>
+                    <strong>Prediction:</strong>
+                    <span id="prediction"></span>
+                </p>
+
+                <p>
+                    <strong>Anomaly Score:</strong>
+                    <span id="anomalyScore"></span>
+                </p>
+
+                <p>
+                    <strong>Threshold:</strong>
+                    <span id="threshold"></span>
+                </p>
+
+                <p>
+                    <strong>Processing Time:</strong>
+                    <span id="processingTime"></span>
+                </p>
+
+            </div>
+
+            <div class="images">
+
+                <div class="image-card">
+                    <h3>Original Image</h3>
+                    <img id="originalImage" alt="Original image">
+                </div>
+
+                <div class="image-card">
+                    <h3>Anomaly Heatmap</h3>
+                    <img id="heatmapImage" alt="Anomaly heatmap">
+                    
+                </div>
+                <div class="image-card">
+                    <h3>Defect Localization</h3>
+                     <img id="overlayImage" alt="Heatmap overlay">
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="/frontend/script.js"></script>
+
+</body>
+</html>
