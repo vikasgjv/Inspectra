@@ -6,6 +6,8 @@ torchvision
 numpy
 pandas
 scikit-learn
-opencv-python
+opencv-python-headless
 pillow
 sqlalchemy
+joblib
+gdown
