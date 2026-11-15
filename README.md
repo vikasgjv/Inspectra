@@ -254,6 +254,6 @@ Please check MVTec AD's license terms before using the dataset or redistributing
 
 <div align="center">
 
-**Built by [@vikasgjv](https://github.com/vikasgjv)** · If you find this useful, consider giving it a ⭐
+ · If you find this useful, consider giving it a ⭐
 
 </div>
