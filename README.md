@@ -16,24 +16,24 @@ Upload a product image, pick its category, and get a **normal / defective** verd
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Inspectra detects anomalies in industrial product images **without needing defective samples for training**. It learns what *normal* looks like for each product category from defect-free images, then flags anything that deviates from it at inference time.
 
 The approach is **PatchCore-inspired**: pretrained CNN features are extracted per image patch and compared against a compact memory bank of normal patches. Patches that sit far from anything "normal" light up on the anomaly heatmap.
 
-> ⚠️ **Honest note:** Inspectra is a *PatchCore-inspired* scalable approximation, **not** an exact reproduction of PatchCore. See [Methodology](#-methodology) for the differences.
+>  **Honest note:** Inspectra is a *PatchCore-inspired* scalable approximation, **not** an exact reproduction of PatchCore. See [Methodology](#-methodology) for the differences.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🖼️ **Upload and inspect** any product image from the browser
-- 🗂️ **Category-aware detection** across the 15 MVTec AD categories
-- 🧮 **Anomaly score + threshold** shown with every prediction
-- 🌡️ **Anomaly heatmap** and **defect-localization overlay**
-- ⏱️ **Processing time** reported per inspection
-- ⚡ **FastAPI backend** serving a lightweight HTML/CSS/JS frontend
+-  **Upload and inspect** any product image from the browser
+-  **Category-aware detection** across the 15 MVTec AD categories
+-  **Anomaly score + threshold** shown with every prediction
+-  **Anomaly heatmap** and **defect-localization overlay**
+-  **Processing time** reported per inspection
+-  **FastAPI backend** serving a lightweight HTML/CSS/JS frontend
 
 ### What you get back for each image
 
@@ -49,7 +49,7 @@ The approach is **PatchCore-inspired**: pretrained CNN features are extracted pe
 
 ---
 
-## 🧠 Methodology
+##   Methodology
 
 ```mermaid
 flowchart LR
@@ -87,7 +87,7 @@ MiniBatchKMeans keeps the memory bank small and inference fast, but its effect o
 
 ---
 
-## 📊 Results
+##   Results
 
 Figures from earlier project evaluation on MVTec AD:
 
@@ -104,7 +104,7 @@ A good `zipper` test image was once flagged defective (score `0.3574` vs. thresh
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 Inspectra/
@@ -131,7 +131,7 @@ Inspectra/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 Setup is automated. The trained model artifacts are hosted on **Google Drive**, and `setup.sh` downloads them for you, so a fresh clone can run inference after two commands.
 
@@ -189,7 +189,7 @@ python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 | Layer | Tools |
 | --- | --- |
@@ -201,26 +201,26 @@ python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 
 ---
 
-## 🛡️ Project Status and Limitations
+##   Project Status and Limitations
 
 Inspectra is a **working local prototype** for learning and demonstration. It has been run end-to-end locally (upload → prediction → heatmap → localization), but it is **not production-ready**.
 
 | Area | Status |
 | --- | --- |
-| Local demo | ✅ Working |
-| Reproducible evaluation | 🔶 In progress |
-| Threshold calibration | 🔶 Needs validation on held-out normal data |
-| Upload validation and size limits | 🔶 Needs review |
-| CORS / API access control | 🔶 Currently permissive; restrict before any public deployment |
-| Model distribution | ✅ Hosted on Google Drive, downloaded by `setup.sh` |
-| Automated setup | ✅ `setup.sh` + `run.sh` |
-| Production deployment | ❌ Not yet |
+| Local demo | Working |
+| Reproducible evaluation |  In progress |
+| Threshold calibration |   Needs validation on held-out normal data |
+| Upload validation and size limits   Needs review |
+| CORS / API access control |  Currently permissive; restrict before any public deployment |
+| Model distribution |  Hosted on Google Drive, downloaded by `setup.sh` |
+| Automated setup |  `setup.sh` + `run.sh` |
+| Production deployment |   Not yet |
 
 **Please don't expose this API publicly as-is.** The anomaly score is a raw model score; do not read it as a probability or confidence percentage.
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] Complete a line-by-line source review (`main.py`, `ml_engine.py`, frontend JS)
 - [ ] Reproduce aggregate and **per-category** Image/Pixel AUROC; publish in `results/`
@@ -236,13 +236,13 @@ Inspectra is a **working local prototype** for learning and demonstration. It ha
 
 ---
 
-## 🧪 Reproducibility Checklist (planned)
+##   Reproducibility Checklist (planned)
 
 To make results repeatable, the following will be recorded per run: random seeds, dataset split, model weights, PCA artifacts, memory-bank settings, and dependency versions.
 
 ---
 
-## 🙏 Acknowledgements
+##   Acknowledgements
 
 - **MVTec AD** dataset by MVTec Software GmbH
 - **PatchCore**: Roth et al., *Towards Total Recall in Industrial Anomaly Detection* (CVPR 2022), the inspiration for this approach
