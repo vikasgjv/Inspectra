@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔍 Inspectra
+#  Inspectra
 
 ### AI-Powered Industrial Visual Inspection
 
